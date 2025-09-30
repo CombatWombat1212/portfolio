@@ -49,11 +49,12 @@ const fonts = [
   //   src: '/assets/fonts/gira_sans/Gira_Sans_Light_Italic.otf',
   //   format: 'opentype'
   // },
-  {
-    fontName: 'Tenon Regular',
-    src: '/assets/fonts/tenon/Tenon.otf',
-    format: 'opentype'
-  },
+  // Tenon fonts now loaded via Adobe Typekit (see _document.js)
+  // {
+  //   fontName: 'Tenon Regular',
+  //   src: '/assets/fonts/tenon/Tenon.otf',
+  //   format: 'opentype'
+  // },
   // {
   //   fontName: 'Tenon Medium',
   //   src: '/assets/fonts/tenon/Tenon_Medium.otf',
