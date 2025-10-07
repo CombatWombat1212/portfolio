@@ -23,59 +23,23 @@ import usePop from "@/components/global/popup/usePop";
 import { useResponsive } from "@/scripts/contexts/ResponsiveContext";
 import { usePostScrollbarSizeToRoot } from "@/scripts/hooks/useScrollbarSize";
 import MAKERIGHT_IMGS from "@/data/MAKERIGHT_IMGS";
-import useFont from "@/scripts/hooks/useFont";
 import { LOADING_IMGS } from "@/data/LOADING_IMGS";
 import GoogleAnalytics from "@/components/head/GoogleAnalytics";
 
 
-const fonts = [
-  {
-    fontName: 'Gira Sans Regular',
-    src: '/assets/fonts/gira_sans/Gira_Sans.otf',
-    format: 'opentype'
-  },
-  {
-    fontName: 'Gira Sans Medium',
-    src: '/assets/fonts/gira_sans/Gira_Sans_Medium.otf',
-    format: 'opentype'
-  },
-  // {
-  //   fontName: 'Gira Sans Light',
-  //   src: '/assets/fonts/gira_sans/Gira_Sans_Light.otf',
-  //   format: 'opentype'
-  // },
-  // {
-  //   fontName: 'Gira Sans Light Italic',
-  //   src: '/assets/fonts/gira_sans/Gira_Sans_Light_Italic.otf',
-  //   format: 'opentype'
-  // },
-  {
-    fontName: 'Tenon Regular',
-    src: '/assets/fonts/tenon/Tenon.otf',
-    format: 'opentype'
-  },
-  // {
-  //   fontName: 'Tenon Medium',
-  //   src: '/assets/fonts/tenon/Tenon_Medium.otf',
-  //   format: 'opentype'
-  // },
-  // {
-  //   fontName: 'Tenon Bold',
-  //   src: '/assets/fonts/tenon/Tenon_Bold.otf',
-  //   format: 'opentype'
-  // },
-]
+// All fonts now loaded via Adobe Fonts (see _document.js)
+// Adobe Fonts URL: https://use.typekit.net/oly6zul.css
 
 
 
 
 
 // const style =
-// `font-family: "Gira Sans"; font-size: 1.4375rem;` +
+// `font-family: "gira-sans", sans-serif; font-size: 1.4375rem;` +
 // // +`line-height:2rem;`
 // `line-height:2rem;` +
 // `font-style:italic;` +
-// `font-weight: 400;  color: ${generateRainbowColor(hue)};` +
+// `font-weight: 500;  color: ${generateRainbowColor(hue)};` +
 // // +`padding: 0.225rem 0.775rem 1.375rem 0.775rem;`;
 // `padding: 0.725rem 0.775rem 0.875rem 0.775rem;`;
 
@@ -89,13 +53,13 @@ function generateWaveText(text, hue) {
   const styles = characters.map(
     (char, i) =>
       `color: ${generateRainbowColor((hue + i * 15) % 360)};` +
-      `font-family: "Gira Sans"; font-size: 1.4375rem;` +
+      `font-family: "gira-sans", sans-serif; font-size: 1.4375rem;` +
       `line-height:2rem;` +
       `font-style:italic;` +
       // + `padding: 0.725rem 0.775rem 0.875rem 0.775rem;`
       `padding-top: 0.35rem;` +
       `padding-bottom: 0.7525rem;` +
-      `font-weight: 400;`
+      `font-weight: 500;`
   );
   return [styledText, ...styles];
 }
@@ -137,7 +101,6 @@ export default function App({ Component, pageProps }) {
   // }, [bp]);
 
   const {loading} = useResponsiveUtils();
-  const fontsLoaded = useFont(fonts);
 
   useBrowserClass();
   usePostScrollbarSizeToRoot({update:[pop.on, loading]});
@@ -158,8 +121,7 @@ export default function App({ Component, pageProps }) {
             <LoadingScreen />
             <div className="site"
             style={{
-              'opacity': (loading || !fontsLoaded) ? '0' : '1',
-              // 'overflow': (loading || !fontsLoaded) ? 'hidden' : 'visible',
+              'opacity': loading ? '0' : '1',
               'transition': 'opacity 0.2s',
             }}
             >

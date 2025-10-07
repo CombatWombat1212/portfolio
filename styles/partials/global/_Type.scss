@@ -1,5 +1,5 @@
-$font-title: "Gira Sans";
-$font-body: "Tenon";
+$font-title: "gira-sans", sans-serif;
+$font-body: "tenon", sans-serif;
 
 :root {
   --font-size-h1: 3.395rem;
@@ -153,19 +153,19 @@ $font-body: "Tenon";
   font-weight: 300;
 }
 @mixin weight-reg {
-  font-weight: 400 !important;
-  & > * {
-    font-weight: 400 !important;
-  }
-}
-@mixin weight-med {
   font-weight: 500 !important;
   & > * {
     font-weight: 500 !important;
   }
 }
+@mixin weight-med {
+  font-weight: 600 !important;
+  & > * {
+    font-weight: 600 !important;
+  }
+}
 @mixin weight-bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 @mixin italic {
@@ -176,14 +176,14 @@ $font-body: "Tenon";
   font-family: $font-title;
   font-size: var(--font-size-h1);
   line-height: var(--font-leading-h1);
-  @include weight-med;
+  @include weight-med;  // weight-med = 600 for gira-sans
 }
 
 @mixin h2 {
   font-family: $font-title;
   font-size: var(--font-size-h2);
   line-height: var(--font-leading-h2);
-  @include weight-med;
+  @include weight-med;  // weight-med = 600 for gira-sans
 }
 
 @mixin h2-margin {
@@ -261,7 +261,7 @@ h3,
   @include h3;
   
   b{
-    font-weight: 500;
+    font-weight: 600;  // gira-sans medium
   }
 }
 

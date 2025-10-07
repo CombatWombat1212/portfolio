@@ -59,61 +59,10 @@ input, button, textarea, select {
 }
 
 @use "sass:math";
-@font-face {
-  font-family: "Gira Sans";
-  src: url("/assets/fonts/gira_sans/Gira_Sans.otf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Gira Sans";
-  src: url("/assets/fonts/gira_sans/Gira_Sans_Medium.otf");
-  font-weight: 500;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Gira Sans";
-  src: url("/assets/fonts/gira_sans/Gira_Sans_Light.otf");
-  font-weight: 300;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Gira Sans";
-  src: url("/assets/fonts/gira_sans/Gira_Sans_Light_Italic.otf");
-  font-weight: 300;
-  font-style: italic;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Tenon";
-  src: url("/assets/fonts/tenon/Tenon.otf");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Tenon";
-  src: url("/assets/fonts/tenon/Tenon_Medium.otf");
-  font-weight: 500;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: "Tenon";
-  src: url("/assets/fonts/tenon/Tenon_Bold.otf");
-  font-weight: 600;
-  font-style: bold;
-  font-display: block;
-}
+/* All fonts now loaded via Adobe Fonts (see _document.js) */
+/* Adobe Fonts URL: https://use.typekit.net/oly6zul.css */
+/* Tenon font weights: 200 (X-Light), 300 (Light), 400 (Regular), 500 (Medium), 700 (Bold), 800 (X-Bold) */
+/* Gira Sans font weights: 300 (Light), 500 (Regular), 600 (Medium), 700 (Bold) */
 
 :root {
   --font-size-h1: 3.395rem;
@@ -134,7 +83,7 @@ input, button, textarea, select {
   --font-margin-bottom-h3: 1.125rem;
   --font-margin-bottom-h3_less: 0.695rem;
   --font-margin-bottom-h4: 0.25rem;
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   color: #074391;
 }
 
@@ -216,33 +165,33 @@ input, button, textarea, select {
 
 h1,
 .text--h1 {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h1);
   line-height: var(--font-leading-h1);
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 h1 > *,
 .text--h1 > * {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 h2,
 .text--h2 {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h2);
   line-height: var(--font-leading-h2);
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 h2 > *,
 .text--h2 > * {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 h3,
 .text--h3 {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h3);
   line-height: var(--font-leading-h3);
   font-weight: 300;
@@ -250,12 +199,12 @@ h3,
 
 h3 b,
 .text--h3 b {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 h4,
 .text--h4 {
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-h4);
   line-height: var(--font-leading-h4);
   color: #C41263;
@@ -273,7 +222,7 @@ h4 > *,
 
 h5,
 .text--h5 {
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--font-leading-body);
   font-weight: 400;
@@ -289,7 +238,7 @@ p,
 .text--body,
 li,
 span {
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--font-leading-body);
   font-weight: 400;
@@ -300,23 +249,23 @@ span {
 }
 
 .weight-reg {
-  font-weight: 400 !important;
+  font-weight: 500 !important;
 }
 
 .weight-reg > * {
-  font-weight: 400 !important;
+  font-weight: 500 !important;
 }
 
 .weight-med {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 .weight-med > * {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 .weight-bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .text--italic {
@@ -1439,26 +1388,26 @@ body {
 }
 
 .studypanel--title {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h1);
   line-height: var(--font-leading-h1);
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 .studypanel--title > * {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 .studypanel--subtitle {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h2);
   line-height: var(--font-leading-h2);
-  font-weight: 500 !important;
-  font-weight: 500;
+  font-weight: 600 !important;
+  font-weight: 600;
 }
 
 .studypanel--subtitle > * {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 h1 + .studypanel--subheading {
@@ -1902,7 +1851,7 @@ h3 + .studypanel--paragraph {
   -webkit-border-radius: var(--b-rad);
   -moz-border-radius: var(--b-rad);
   -khtml-border-radius: var(--b-rad);
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--font-leading-body);
   font-weight: 400;
@@ -2266,7 +2215,7 @@ h3 + .studypanel--paragraph {
 }
 
 .nav--logo a {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h3);
   line-height: var(--font-leading-h3);
   font-weight: 300;
@@ -2277,7 +2226,7 @@ h3 + .studypanel--paragraph {
 }
 
 .nav--links a {
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--font-leading-body);
   font-weight: 400;
@@ -2457,10 +2406,10 @@ h3 + .studypanel--paragraph {
 }
 
 .nav--menu-item {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h2);
   line-height: var(--font-leading-h2);
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   font-weight: 400;
   color: #074391;
   transition: 0.2s;
@@ -2651,7 +2600,7 @@ h3 + .studypanel--paragraph {
 }
 
 .footer .sitemap--title {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h3);
   line-height: var(--font-leading-h3);
   font-weight: 300;
@@ -3112,7 +3061,7 @@ h3 + .studypanel--paragraph {
 
 .safari .section--description ul li span::before {
   content: "•";
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--font-leading-body);
   font-weight: 400;
@@ -3668,7 +3617,8 @@ h3 + .studypanel--paragraph {
 }
 
 .arrow--mask__default {
-  margin-top: calc( ((var(--section-graphic-panel-pad) * 2) + var(--img-panel-height) - var(--arrow-height)) / 2);
+  margin-top: calc(
+ ((var(--section-graphic-panel-pad) * 2) + var(--img-panel-height) - var(--arrow-height)) / 2);
 }
 
 .arrow--mask__anchored {
@@ -5009,7 +4959,7 @@ h3 + .studypanel--paragraph {
 }
 
 .section--quote * {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-quote);
   line-height: var(--font-leading-quote);
   word-spacing: 0.0125rem;
@@ -5955,7 +5905,7 @@ h3 + .studypanel--paragraph {
 }
 
 .pitch .pitch--description * {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h3);
   line-height: var(--font-leading-h3);
   font-weight: 300;
@@ -6467,7 +6417,11 @@ h3 + .studypanel--paragraph {
     * var(--row-is-incomplete)
     
     );
-  width: calc( 100% -  (var(--site-x-margin) * var(--line-isnt-middle)) -  (var(--buffer) * var(--line-isnt-middle)) - var(--column-offset));
+  width: calc(
+ 100% - 
+ (var(--site-x-margin) * var(--line-isnt-middle)) - 
+ (var(--buffer) * var(--line-isnt-middle))
+ - var(--column-offset));
   top: calc(var(--line-top) - (var(--col-line-height) / 2));
   left: calc(var(--site-x-margin) + (var(--site-x-margin) * var(--line-left-offset)) + (var(--buffer) * var(--line-is-first)));
 }
@@ -7068,7 +7022,7 @@ h3 + .studypanel--paragraph {
 
 .split--label {
   position: absolute;
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-h4);
   line-height: var(--font-leading-h4);
   color: #C41263;
@@ -8013,7 +7967,7 @@ h3 + .studypanel--paragraph {
 }
 
 .gantt .label__primary {
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--font-leading-body);
   font-weight: 500 !important;
@@ -8024,7 +7978,7 @@ h3 + .studypanel--paragraph {
 }
 
 .gantt .label__secondary {
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--font-leading-body);
   font-weight: 400;
@@ -8032,7 +7986,7 @@ h3 + .studypanel--paragraph {
 }
 
 .gantt .label__tertiary {
-  font-family: "Tenon";
+  font-family: "tenon", sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--font-leading-body);
   font-weight: 400;
@@ -8083,7 +8037,7 @@ h3 + .studypanel--paragraph {
     --bar-graph-bar-label-pad: 0.45rem;
   }
   .bar-graph--wrapper span {
-    font-family: "Tenon";
+    font-family: "tenon", sans-serif;
     font-size: var(--font-size-h4);
     line-height: var(--font-leading-h4);
     font-weight: 400;
@@ -8364,16 +8318,16 @@ h3 + .studypanel--paragraph {
 }
 
 .pie .circle--label span {
-  font-family: "Gira Sans";
+  font-family: "gira-sans", sans-serif;
   font-size: var(--font-size-h2);
   line-height: var(--font-leading-h2);
-  font-weight: 500 !important;
-  font-family: "Tenon";
+  font-weight: 600 !important;
+  font-family: "tenon", sans-serif;
   font-weight: 300;
 }
 
 .pie .circle--label span > * {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 .pie .circle--label__highlighted {
